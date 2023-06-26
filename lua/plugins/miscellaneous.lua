@@ -24,20 +24,21 @@ return {
 
 	--leap
 	{
-		'ggandor/leap.nvim',
-		config = function()
-			require("leap").add_default_mappings(true)
-		end
+		"ggandor/leap.nvim",
+		-- config = function()
+		-- require("leap").add_default_mappings(true)
+		-- end,
 	},
 	{
-		'echasnovski/mini.comment',
-		version = '*',
+		"echasnovski/mini.comment",
+		version = "*",
 		opts = {
 			mappings = {
 				comment = "<leader>cc",
 				comment_line = "<leader>cl",
-				textobject = "/"
-			}
-		}
+				textobject = "/",
+			},
+		},
 	},
+	"jiangmiao/auto-pairs",
 }

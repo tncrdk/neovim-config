@@ -15,10 +15,9 @@ map("n", "<leader>fa", "<cmd>wa<cr>", "Write all")
 map("n", "<leader>qw", "<cmd>q<cr>", "Quit") -- window quit TODO Legg til under window management
 map("n", "<leader>qs", "<cmd>wq<cr>", "Save and Quit")
 map("n", "<leader>qq", "<cmd>qa!<cr>", "Quit all")
--- map("n", "<leader>wd", "<cmd>close<cr>", "Window")
 
 -- Diagnostic keymaps
-map('n', 'gx', vim.diagnostic.open_float, "Show diagnostics under cursor")
+map("n", "gx", vim.diagnostic.open_float, "Show diagnostics under cursor")
 
 -- Lazy
 map("n", "<leader>L", require("lazy").show, "Show Lazy")
@@ -62,8 +61,12 @@ map("n", "<S-w>", ":bnext<CR>")
 map("n", "<S-b>", ":bprevious<CR>")
 
 -- Stay in indent mode
-vim.keymap.set({ "n", "v" }, "<S-tab>", "<gv", { remap = true })
-vim.keymap.set({ "n", "v" }, "<tab>", ">gv", { remap = true })
+vim.keymap.set("v", "<S-tab>", "<gv", { remap = true })
+vim.keymap.set("v", "<tab>", ">gv", { remap = true })
+
+-- Use tab-keys for tab
+vim.keymap.set("n", "<tab>", "v>gv<esc>", { remap = true })
+vim.keymap.set("n", "<S-tab>", "v<gv<esc>", { remap = true })
 
 -- Switch between light and dark modes
 map("n", "<leader>ut", function()
@@ -81,11 +84,11 @@ map("n", "<leader>ur", "<cmd>nohl<cr>", "Clear highlights")
 map("n", "<leader>a", "ggV<S-g>", "Select entire file")
 
 -- Fuzzyfinder
-local builtin = require('telescope.builtin')
-map('n', '<leader>sf', builtin.find_files, "find files")
-map('n', '<leader>sg', builtin.live_grep, "live grep")
-map('n', '<leader>sb', builtin.buffers, "buffers")
-map('n', '<leader>sh', builtin.help_tags, "help tags")
+local builtin = require("telescope.builtin")
+map("n", "<leader>sf", builtin.find_files, "find files")
+map("n", "<leader>sg", builtin.live_grep, "live grep")
+map("n", "<leader>sb", builtin.buffers, "buffers")
+map("n", "<leader>sh", builtin.help_tags, "help tags")
 map("n", "<leader>sn", "<cmd>Telescope notify<CR>", "Notify")
 
 -- windows
@@ -103,3 +106,7 @@ map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", "Toggle do
 map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", "Toggle loclist")
 map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", "Toggle quickfix")
 map("n", "<leader>xr", "<cmd>TroubleToggle lsp_references<cr>", "Toggle LSP-references")
+
+-- Leap
+vim.keymap.set({ "n", "v" }, "f", "<Plug>(leap-forward-to)", { remap = true })
+vim.keymap.set({ "n", "v" }, "F", "<Plug>(leap-backward-to)", { remap = true })
