@@ -47,6 +47,17 @@ map("n", "<C-Down>", ":resize -2<CR>")
 map("n", "<C-Left>", ":vertical resize +2<CR>")
 map("n", "<C-Right>", ":vertical resize -2<CR>")
 
+-- Yank to system clipboard
+map({ "n", "v" }, "<leader>y", '"+y', "Yank to system clipboard")
+map("n", "<leader>Y", '"+Y', "Yank to system clipboard")
+map({ "n", "v" }, "<leader>p", '"+p', "Paste from system clipboard")
+map({ "n", "v" }, "<leader>P", '"+P', "Paste from system clipboard")
+
+-- Don't override paste-buffer
+map("x", "<leader>rp", '"_dp', "Paste without overriding paste-buffer")
+map({ "n", "v" }, "<leader>rd", '"_d', "Delete without overriding paste-buffer")
+map({ "n", "v" }, "<leader>rD", '"_D', "Delete without overriding paste-buffer")
+
 -- save file
 map({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", "Save file")
 

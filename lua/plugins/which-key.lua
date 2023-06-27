@@ -13,10 +13,11 @@ return {
 					s = { name = "Search" },
 					l = { name = "LSP" },
 					u = { name = "UI" },
-					d = { name = "Debugging" },
+					d = { name = "Deletion" },
 					g = { name = "Git" },
 					w = { name = "Window" },
 					x = { name = "Trouble" },
+					r = { name = "Preserve registry" }
 				},
 			})
 		end,
