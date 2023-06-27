@@ -18,12 +18,13 @@ opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
 opt.ignorecase = true      -- Ignore case
 opt.inccommand = "nosplit" -- preview incremental substitute
+opt.incsearch = true
 opt.laststatus = 0
 opt.list = true            -- Show some invisible characters (tabs...
 opt.mouse = "a"            -- Enable mouse mode
 opt.pumblend = 10          -- Popup blend
 opt.pumheight = 10         -- Maximum number of entries in a popup
-opt.scrolloff = 4          -- Lines of context,
+opt.scrolloff = 8          -- Lines of context,
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 opt.shiftround = true      -- Round indent
 opt.showmode = false       -- Dont show mode since we have a statusline
@@ -41,14 +42,11 @@ opt.updatetime = 200               -- Save swap file and trigger CursorHold
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5                -- Minimum window width,
 opt.shortmess:append({ W = true, I = true, c = true })
-
-
-
+opt.hlsearch = false
 
 -- Set other options
 local colorscheme = require("helpers.colorscheme")
 vim.cmd.colorscheme(colorscheme)
-
 
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
