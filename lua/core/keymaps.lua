@@ -72,12 +72,13 @@ map("n", "<S-w>", ":bnext<CR>")
 map("n", "<S-b>", ":bprevious<CR>")
 
 -- Stay in indent mode
-vim.keymap.set("v", "<S-tab>", "<gv", { remap = true })
-vim.keymap.set("v", "<tab>", ">gv", { remap = true })
+map("v", "<S-tab>", "<gv" )
+map("v", "<tab>", ">gv")
 
 -- Use tab-keys for tab
-vim.keymap.set("n", "<tab>", "v>gv<esc>", { remap = true })
-vim.keymap.set("n", "<S-tab>", "v<gv<esc>", { remap = true })
+map("n", "<tab>", "v>gv<esc>")
+map("n", "<S-tab>", "v<gv<esc>")
+map("i", "<S-tab>", "<C-d>")
 
 -- Switch between light and dark modes
 map("n", "<leader>ut", function()
@@ -121,3 +122,6 @@ map("n", "<leader>xr", "<cmd>TroubleToggle lsp_references<cr>", "Toggle LSP-refe
 -- Leap
 vim.keymap.set({ "n", "v" }, "f", "<Plug>(leap-forward-to)", { remap = true })
 vim.keymap.set({ "n", "v" }, "F", "<Plug>(leap-backward-to)", { remap = true })
+
+-- Undotree
+map("n", "<leader>U", "<cmd>UndotreeToggle<CR>")

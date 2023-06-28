@@ -41,4 +41,5 @@ return {
 		},
 	},
 	"jiangmiao/auto-pairs",
+	"mbbill/undotree"
 }
