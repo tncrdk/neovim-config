@@ -5,7 +5,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			{ "j-hui/fidget.nvim", tag = 'legacy' },
+			{ "j-hui/fidget.nvim", tag = "legacy" },
 			"folke/neodev.nvim",
 			"RRethy/vim-illuminate",
 			"hrsh7th/cmp-nvim-lsp",
@@ -16,7 +16,8 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"pylsp",
+					"pyright",
+					"pylsp"
 				},
 				automatic_installation = true,
 			})
@@ -88,7 +89,7 @@ return {
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 			-- Lua
-			require("lspconfig")["lua_ls"].setup({
+			require("lspconfig").lua_ls.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
 				settings = {
@@ -110,7 +111,17 @@ return {
 			})
 
 			-- Python
-			require("lspconfig")["pylsp"].setup({
+			require("lspconfig").pyright.setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+				settings = {
+					pyright = {
+						disableLanguageServices = true
+					}
+				}
+			})
+
+			require("lspconfig").pylsp.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
 				settings = {
