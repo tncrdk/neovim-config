@@ -17,7 +17,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"pyright",
-					"pylsp"
+					"pylsp",
 				},
 				automatic_installation = true,
 			})
@@ -40,7 +40,7 @@ return {
 
 			-- Diagnostic config
 			local config = {
-				virtual_text = false,
+				virtual_text = true,
 				signs = {
 					active = signs,
 				},
@@ -116,9 +116,9 @@ return {
 				capabilities = capabilities,
 				settings = {
 					pyright = {
-						disableLanguageServices = true
-					}
-				}
+						disableLanguageServices = true,
+					},
+				},
 			})
 
 			require("lspconfig").pylsp.setup({
