@@ -13,7 +13,6 @@ return {
 					s = { name = "Search" },
 					l = { name = "LSP" },
 					u = { name = "UI" },
-					d = { name = "Deletion" },
 					g = { name = "Git" },
 					w = { name = "Window" },
 					x = { name = "Trouble" },
