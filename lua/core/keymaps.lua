@@ -72,7 +72,7 @@ map("n", "<S-w>", ":bnext<CR>")
 map("n", "<S-b>", ":bprevious<CR>")
 
 -- Stay in indent mode
-map("v", "<S-tab>", "<gv" )
+map("v", "<S-tab>", "<gv")
 map("v", "<tab>", ">gv")
 
 -- Use tab-keys for tab
@@ -125,3 +125,6 @@ vim.keymap.set({ "n", "v" }, "F", "<Plug>(leap-backward-to)", { remap = true })
 
 -- Undotree
 map("n", "<leader>U", "<cmd>UndotreeToggle<CR>")
+
+-- venv-selector
+map("n", "<leader>v", "<cmd>VenvSelect<cr>")
