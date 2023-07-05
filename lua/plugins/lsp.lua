@@ -116,39 +116,46 @@ return {
 				capabilities = capabilities,
 				settings = {
 					pyright = {
-						disableLanguageServices = true,
+						-- disableLanguageServices = true,
 					},
-				},
-			})
-
-			require("lspconfig").pylsp.setup({
-				on_attach = on_attach,
-				capabilities = capabilities,
-				settings = {
-					pylsp = {
-						plugins = {
-							flake8 = {
-								enabled = true,
-								maxLineLength = 88, -- Black's line length
-							},
-							-- Disable plugins overlapping with flake8
-							pycodestyle = {
-								enabled = false,
-							},
-							mccabe = {
-								enabled = false,
-							},
-							pyflakes = {
-								enabled = false,
-							},
-							-- Use Black as the formatter
-							autopep8 = {
-								enabled = false,
-							},
+					python = {
+						analysis = {
+							diagnosticMode = "openFilesOnly",
+							typeCheckingMode = "basic",
+							useLibraryCodeForTypes = true,
 						},
 					},
 				},
 			})
+
+			-- require("lspconfig").pylsp.setup({
+			-- 	on_attach = on_attach,
+			-- 	capabilities = capabilities,
+			-- 	settings = {
+			-- 		pylsp = {
+			-- 			plugins = {
+			-- 				flake8 = {
+			-- 					enabled = true,
+			-- 					maxLineLength = 88, -- Black's line length
+			-- 				},
+			-- 				-- Disable plugins overlapping with flake8
+			-- 				pycodestyle = {
+			-- 					enabled = false,
+			-- 				},
+			-- 				mccabe = {
+			-- 					enabled = false,
+			-- 				},
+			-- 				pyflakes = {
+			-- 					enabled = false,
+			-- 				},
+			-- 				-- Use Black as the formatter
+			-- 				autopep8 = {
+			-- 					enabled = false,
+			-- 				},
+			-- 			},
+			-- 		},
+			-- 	},
+			-- })
 		end,
 	},
 }

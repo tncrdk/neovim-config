@@ -30,9 +30,8 @@ return {
 					"black",
 					"stylua",
 					"clang_format",
-					"rustfmt",
 				},
-				automatic_installation = true
+				automatic_installation = true,
 			})
 		end,
 	},
