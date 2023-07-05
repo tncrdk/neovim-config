@@ -127,4 +127,4 @@ vim.keymap.set({ "n", "v" }, "F", "<Plug>(leap-backward-to)", { remap = true })
 map("n", "<leader>U", "<cmd>UndotreeToggle<CR>")
 
 -- venv-selector
-map("n", "<leader>v", "<cmd>VenvSelect<cr>")
+-- map("n", "<leader>v", "<cmd>VenvSelect<cr>")
