@@ -41,5 +41,6 @@ return {
 		},
 	},
 	"jiangmiao/auto-pairs",
-	"mbbill/undotree"
+	"mbbill/undotree",
+	"mg979/vim-visual-multi",
 }
