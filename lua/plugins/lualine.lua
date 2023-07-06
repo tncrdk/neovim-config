@@ -25,7 +25,6 @@ return {
 				lualine_b = { "filename", "branch" },
 				lualine_c = { "fileformat" },
 				lualine_x = {
-					{ venv, icon = "󰅩", color = { fg = "#8fb55e" } },
 					{
 						"diagnostics",
 						symbols = {
@@ -35,6 +34,7 @@ return {
 							hint = diagnostic_icons.Hint,
 						},
 					},
+					{ "swenv", icon = "󰅩", color = { fg = "#8fb55e" } },
 				},
 				lualine_y = { "filetype", "progress" },
 				lualine_z = {
