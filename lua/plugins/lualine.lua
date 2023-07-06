@@ -1,7 +1,7 @@
 local diagnostic_icons = require("helpers.icons").diagnostics
 
-local function venv()
-	local venv_name = require("venv-selector").get_active_venv()
+local get_venv = function()
+	local venv_name = vim.fn.getenv("VIRTUAL_ENV")
 	if venv_name ~= nil then
 		return string.gsub(venv_name, ".*[\\/]", "")
 	else
@@ -34,7 +34,7 @@ return {
 							hint = diagnostic_icons.Hint,
 						},
 					},
-					{ "swenv", icon = "󰅩", color = { fg = "#8fb55e" } },
+					{ get_venv, icon = "󰅩", color = { fg = "#8fb55e" } },
 				},
 				lualine_y = { "filetype", "progress" },
 				lualine_z = {

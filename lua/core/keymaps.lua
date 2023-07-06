@@ -125,6 +125,3 @@ vim.keymap.set({ "n", "v" }, "F", "<Plug>(leap-backward-to)", { remap = true })
 
 -- Undotree
 map("n", "<leader>U", "<cmd>UndotreeToggle<CR>")
-
--- Swenv
-map("n", "<leader>v", "<cmd>lua require('swenv.api').pick_venv()<cr>")
