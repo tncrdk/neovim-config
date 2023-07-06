@@ -1,3 +1,6 @@
+-- Load priority options
+require("core.priority-options")
+
 -- Handle plugins with lazy.nvim
 require("core.lazy")
 
