@@ -1,3 +1,6 @@
+-- Shell
+if package.config:sub(1,1) ~= '/' then
+-- Sjekker om mappe-separator er / eller \
 -- PowerShell
 vim.opt.shell = vim.fn.executable("pwsh") == 1 and "pwsh" or "powershell"
 vim.opt.shellcmdflag =
@@ -6,3 +9,4 @@ vim.opt.shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait"
 vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
+end
