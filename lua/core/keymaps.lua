@@ -24,7 +24,7 @@ map("n", "<leader>L", require("lazy").show, "Show Lazy")
 
 -- Easier access to beginning and end of lines
 map({ "n", "v" }, "<S-h>", "^", "Go to beginning of line")
-map({ "n", "v" }, "<S-l>", "$", "Go to end of line")
+map({ "n", "v" }, "<S-l>", "g_", "Go to end of line")
 
 -- new file
 map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
