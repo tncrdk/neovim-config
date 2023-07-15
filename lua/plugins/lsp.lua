@@ -120,7 +120,7 @@ return {
 					},
 					python = {
 						analysis = {
-							diagnosticMode = "openFilesOnly",
+							-- diagnosticMode = "openFilesOnly",
 							typeCheckingMode = "basic",
 							useLibraryCodeForTypes = true,
 						},
