@@ -12,6 +12,12 @@ return {
 			require("mini.move").setup()
 		end,
 	},
+	{
+		'brenoprata10/nvim-highlight-colors',
+		config = function()
+			require('nvim-highlight-colors').setup{}
+		end
+		},
 	-- Better buffer closing actions. Available via the buffers helper.
 	{
 		"kazhala/close-buffers.nvim",
