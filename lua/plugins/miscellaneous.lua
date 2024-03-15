@@ -13,11 +13,11 @@ return {
 		end,
 	},
 	{
-		'brenoprata10/nvim-highlight-colors',
+		"brenoprata10/nvim-highlight-colors",
 		config = function()
-			require('nvim-highlight-colors').setup{}
-		end
-		},
+			require("nvim-highlight-colors").setup({})
+		end,
+	},
 	-- Better buffer closing actions. Available via the buffers helper.
 	{
 		"kazhala/close-buffers.nvim",
@@ -49,4 +49,12 @@ return {
 	"jiangmiao/auto-pairs",
 	"mbbill/undotree",
 	"mg979/vim-visual-multi",
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
 }
