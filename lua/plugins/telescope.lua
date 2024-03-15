@@ -18,6 +18,30 @@ return {
 						},
 					},
 				},
+				pickers = {
+					find_files = {
+						find_command = {
+							"fd",
+							"--type",
+							"f",
+							"-u",
+							"-E",
+							"**/.git/*",
+							"-E",
+							"**/.idea/*",
+							"-E",
+							"**/target/*",
+							"-E",
+							"**/build/*",
+							"-E",
+							"**/dist/*",
+							"-E",
+							"**/yarn.lock",
+							"-E",
+							"**/package-lock.json",
+						},
+					},
+				},
 			})
 
 			-- Enable telescope fzf native, if installed
