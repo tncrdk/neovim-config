@@ -100,13 +100,13 @@ return {
                 lualine_a = {},
                 lualine_b = {},
                 lualine_c = {
-                    {
-                        function()
-                            return '▊'
-                        end,
-                        color = { fg = opts.colors.blue }, -- Sets highlighting of component
-                        padding = { left = 0, right = 1 }, -- We don't need space before this
-                    },
+                    -- {
+                    --     function()
+                    --         return '▊'
+                    --     end,
+                    --     color = { fg = opts.colors.blue }, -- Sets highlighting of component
+                    --     padding = { left = 0, right = 1 }, -- We don't need space before this
+                    -- },
                     {
                         function()
                             return opts.modes[vim.fn.mode()]
@@ -114,7 +114,7 @@ return {
                         color = function()
                             return { fg = mode_color[vim.fn.mode()] }
                         end,
-                        padding = { right = 2 },
+                        padding = { right = 1, left = 1 },
                     },
                     {
                         -- filesize component
@@ -191,16 +191,16 @@ return {
                             end
                             return msg
                         end,
-                        icon = '  LSP:',
+                        icon = ' ',
                         color = { fg = opts.colors.yellow, gui = 'bold' },
                     },
-                    {
-                        function()
-                            return '▊'
-                        end,
-                        color = { fg = opts.colors.blue },
-                        padding = { left = 1 },
-                    }
+                    -- {
+                    --     function()
+                    --         return '▊'
+                    --     end,
+                    --     color = { fg = opts.colors.blue },
+                    --     padding = { left = 1 },
+                    -- }
                 },
                 lualine_y = {},
                 lualine_z = {},
