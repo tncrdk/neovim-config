@@ -12,14 +12,17 @@ return {
     },
     { "brenoprata10/nvim-highlight-colors", config = true, },
     {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function()
-            vim.fn["mkdp#util#install"]()
+        "toppair/peek.nvim",
+        event = { "VeryLazy" },
+        build = "deno task --quiet build:fast",
+        config = function()
+            require("peek").setup({
+                app = "brave"
+            })
+            vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+            vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
         end,
     },
-
     -- Mini
     { 'echasnovski/mini.jump',              version = '*', config = true, },
     { 'echasnovski/mini.splitjoin',         version = '*', config = true, },
