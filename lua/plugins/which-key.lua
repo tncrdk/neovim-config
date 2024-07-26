@@ -9,25 +9,23 @@ return {
 		opts = {
 			plugins = { spelling = true },
 			defaults = {
-				["<leader>"] = {
-					f = { name = "File" },
-					b = { name = "Buffers" },
-					c = { name = "Comment" },
-					q = { name = "Quit" },
-					s = { name = "Search" },
-					l = { name = "LSP" },
-					u = { name = "UI" },
-					g = { name = "Git" },
-					w = { name = "Window" },
-					x = { name = "Trouble" },
-					r = { name = "Preserve registry" }
-				},
+				{ "<leader>b", group = "Buffers" },
+				{ "<leader>c", group = "Comment" },
+				{ "<leader>f", group = "File" },
+				{ "<leader>g", group = "Git" },
+				{ "<leader>l", group = "LSP" },
+				{ "<leader>q", group = "Quit" },
+				{ "<leader>r", group = "Preserve registry" },
+				{ "<leader>s", group = "Search" },
+				{ "<leader>u", group = "UI" },
+				{ "<leader>w", group = "Window" },
+				{ "<leader>x", group = "Trouble" },
 			}
 		},
 		config = function(_, opts)
 			local wk = require("which-key")
 			wk.setup(opts)
-			wk.register(opts.defaults)
+			wk.add(opts.defaults)
 		end
 	},
 }
