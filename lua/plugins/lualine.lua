@@ -116,12 +116,12 @@ return {
                         end,
                         padding = { right = 1, left = 1 },
                     },
-                    {
-                        -- filesize component
-                        'filesize',
-                        cond = conditions.buffer_not_empty,
-                        color = { fg = opts.colors.orange },
-                    },
+                    -- {
+                    --     -- filesize component
+                    --     'filesize',
+                    --     cond = conditions.buffer_not_empty,
+                    --     color = { fg = opts.colors.orange },
+                    -- },
                     {
                         'filename',
                         cond = conditions.buffer_not_empty,
