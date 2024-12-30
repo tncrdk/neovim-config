@@ -34,7 +34,7 @@ opt.smartindent = true -- Insert indents automatically
 opt.spelllang = "en"
 opt.splitbelow = true  -- Put new windows below current
 opt.splitright = true  -- Put new windows right of current
-opt.timeoutlen = 30
+opt.timeoutlen = 500
 opt.undofile = true
 opt.undolevels = 10000
 opt.updatetime = 200               -- Save swap file and trigger CursorHold
@@ -54,5 +54,5 @@ local colorscheme = require("helpers.colorscheme")
 vim.cmd.colorscheme(colorscheme)
 
 
--- Fix markdown indentation settings
+-- -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
