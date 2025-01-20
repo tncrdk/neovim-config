@@ -56,3 +56,9 @@ vim.cmd.colorscheme(colorscheme)
 
 -- -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+-- Set tabsize to 2 when working with R-files 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "r",
+	command = "setlocal shiftwidth=2 tabstop=2"
+})
