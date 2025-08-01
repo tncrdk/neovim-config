@@ -9,10 +9,11 @@ opt.number = true
 opt.relativenumber = true
 opt.autowrite = true           -- Enable auto write
 opt.completeopt = "menu,menuone,noselect"
-opt.conceallevel = 3           -- Hide * markup for bold and italic
+-- opt.conceallevel = 3           -- Hide * markup for bold and italic
+opt.conceallevel = 0
 opt.confirm = true             -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true          -- Enable highlighting of the current line
-opt.formatoptions = "jcroqlnt" -- tcqj
+opt.formatoptions = "jcroqln" -- tcqj, jcroqlnt
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
 opt.ignorecase = true      -- Ignore case
@@ -35,6 +36,7 @@ opt.spelllang = "en"
 opt.splitbelow = true  -- Put new windows below current
 opt.splitright = true  -- Put new windows right of current
 opt.timeoutlen = 500   -- Timout of keycombinations. Which-key appears after the timeout. Needs to be high enough for vim-surround binding as it is one binding
+opt.textwidth = 80
 opt.undofile = true
 opt.undolevels = 10000
 opt.updatetime = 200               -- Save swap file and trigger CursorHold
@@ -54,10 +56,10 @@ local colorscheme = require("helpers.colorscheme")
 vim.cmd.colorscheme(colorscheme)
 
 
--- -- Fix markdown indentation settings
+-- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
--- Set tabsize to 2 when working with R-files 
+-- Set tabsize to 2 when working with R-files
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "r",
 	command = "setlocal shiftwidth=2 tabstop=2"
