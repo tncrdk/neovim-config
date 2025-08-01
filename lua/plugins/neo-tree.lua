@@ -45,4 +45,16 @@ return {
             })
         end,
     },
+    {
+        -- Does not seem to work with all filetypes, including python
+        "antosha417/nvim-lsp-file-operations",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            -- Uncomment whichever supported plugin(s) you use
+            "nvim-neo-tree/neo-tree.nvim",
+        },
+        config = function()
+            require("lsp-file-operations").setup()
+        end,
+    },
 }

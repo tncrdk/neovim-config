@@ -10,7 +10,7 @@ return {
             "hrsh7th/cmp-path",
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
+            -- "rafamadriz/friendly-snippets",
         },
         config = function()
             local cmp = require("cmp")
@@ -62,8 +62,8 @@ return {
                         -- Kind icons
                         vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
                         vim_item.menu = ({
-                            nvim_lsp = "[LSP]",
                             luasnip = "[Snippet]",
+                            nvim_lsp = "[LSP]",
                             buffer = "[Buffer]",
                             path = "[Path]",
                         })[entry.source.name]
