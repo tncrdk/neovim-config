@@ -54,4 +54,4 @@ vim.diagnostic.config({
 )
 
 -- Enable the Lsp servers to be used
-vim.lsp.enable({ "pyright", "lua_ls" })
+vim.lsp.enable({ "pyright", "lua_ls", "texlab", })

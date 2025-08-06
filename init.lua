@@ -4,15 +4,12 @@ Map = function(mode, lhs, rhs, desc)
     vim.keymap.set(mode, lhs, rhs, { silent = true, desc = desc })
 end
 
--- Function for setting leader key
-local set_leader = function(key)
-    vim.g.mapleader = key
-    vim.g.maplocalleader = key
-    Map({ "n", "v" }, key, "<nop>")
-end
-
 -- Set leader key to be <space>
-set_leader(" ")
+vim.g.mapleader = " "
+Map({ "n", "v" }, " ", "<nop>")
+
+-- Set local leader key to be '-'
+vim.g.maplocalleader = "-"
 
 -- Init Lazy
 require("core.lazy")

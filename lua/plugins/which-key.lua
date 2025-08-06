@@ -17,9 +17,9 @@ return {
 				{ "<leader>q", group = "Quit" },
 				{ "<leader>r", group = "Preserve registry" },
 				{ "<leader>s", group = "Search" },
+				{ "<leader>t", group = "Trouble" },
 				{ "<leader>u", group = "UI" },
 				{ "<leader>w", group = "Window" },
-				{ "<leader>x", group = "Trouble" },
 			}
 		},
 		config = function(_, opts)
