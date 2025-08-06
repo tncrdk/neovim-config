@@ -1,5 +1,6 @@
 return {
-    s({ trig = ";p", snippetType = "autosnippet", desc = "A hellow world snippet", wordTrig = true },
-        { t("Python snippet"), }
-    ),
+    s("ifmain", {
+        t({ "if __name__ == \"__main__\":", "    " }),
+        i(1, ""), -- Indented insert point for code
+    }),
 }
