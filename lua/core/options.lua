@@ -7,7 +7,7 @@ opt.conceallevel = 0
 opt.confirm = true             -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true          -- Enable highlighting of the current line
 opt.expandtab = true
-opt.formatoptions = "jcroqlnt" -- tcqj
+opt.formatoptions = "jcroqln" -- tcqj (t for hard linewrap)
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
 opt.hlsearch = false
@@ -63,8 +63,3 @@ vim.cmd.colorscheme(colorscheme)
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
--- Set tabsize to 2 when working with R-files
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "r",
-	command = "setlocal shiftwidth=2 tabstop=2"
-})

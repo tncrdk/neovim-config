@@ -59,3 +59,8 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "r",
   command = "setlocal shiftwidth=2 tabstop=2"
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "md",
+  command = "set formatoptions+=t"
+})
