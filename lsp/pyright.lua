@@ -20,6 +20,7 @@ return {
                 diagnosticMode = "openFilesOnly",
                 typeCheckingMode = "basic",
                 useLibraryCodeForTypes = true,
+                autoImportCompletions = false,
             },
         },
     },
