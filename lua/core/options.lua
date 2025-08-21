@@ -47,7 +47,7 @@ opt.winminwidth = 5                -- Minimum window width,
 opt.wrap = false
 
 -- nvim-navic window bar
--- vim.o.winbar = "|> %{%v:lua.require'nvim-navic'.get_location()%}"
+-- vim.o.winbar = " %{%v:lua.require('nvim-navic').get_location()%}"
 
 -- UndoTree
 -- vim.o.swapfile = false

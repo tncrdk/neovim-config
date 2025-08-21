@@ -27,6 +27,7 @@ return {
             ensure_installed = {
                 "bash",
                 "c",
+                "css",
                 "diff",
                 "html",
                 "javascript",
@@ -43,8 +44,10 @@ return {
                 "regex",
                 "rnoweb",
                 "toml",
+                "typescript",
                 "vim",
                 "vimdoc",
+                "vue",
                 "xml",
                 "yaml",
             },
