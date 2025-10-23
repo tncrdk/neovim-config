@@ -1,1 +1,3 @@
-vim.lsp.config('tailwindcss', {})
+return {
+  filetypes = { "css", "html" }
+}

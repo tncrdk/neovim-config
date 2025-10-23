@@ -1,1 +1,3 @@
-vim.lsp.config('vue_ls', {})
+return {
+  filetypes = { "vue" }
+}
