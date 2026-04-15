@@ -1,8 +1,8 @@
 return {
-    { "tpope/vim-sleuth",            event = "VeryLazy" }, -- Detect tabstop and shiftwidth automatically
-    { "tpope/vim-surround",          event = "VeryLazy" }, -- Surround stuff with the ys-, cs-, ds- commands
-    { "nvim-tree/nvim-web-devicons", lazy = true },
-    { "ggandor/leap.nvim" },
+    { "tpope/vim-sleuth",                        event = "VeryLazy" }, -- Detect tabstop and shiftwidth automatically
+    { "tpope/vim-surround",                      event = "VeryLazy" }, -- Surround stuff with the ys-, cs-, ds- commands
+    { "nvim-tree/nvim-web-devicons",             lazy = true },
+    { url = "https://codeberg.org/andyg/leap.nvim" },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
