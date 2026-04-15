@@ -1,6 +1,6 @@
 -- Init a logger for custom debug printing
 Log = require("core.log")
-Log:write("Hello")
+-- Log:write("Hello")
 
 -- Function for remapping keys
 -- Global variable that can be used in all the other files

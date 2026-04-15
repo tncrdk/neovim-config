@@ -3,6 +3,9 @@
 -- Blazingly fast way out of insert mode
 -- map("i", "jk", "<esc>")
 
+-- Show Lazy menu
+Map("n", "<leader>L", require("lazy").show, "Show Lazy")
+
 -- better up/down
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })

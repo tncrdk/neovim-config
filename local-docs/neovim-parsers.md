@@ -11,7 +11,7 @@ As an example, I will take Go language:
 ```sh
 git clone https://github.com/tree-sitter/tree-sitter-go ~/my/location/tree-sitter-go
 cd ~/my/location/tree-sitter-go
-tree-sitter generate
+tree-sitter generate  # Might not need to run this part if a grammar.js is already present
 tree-sitter build
 ```
 
@@ -34,3 +34,6 @@ cp -r runtime/queries ~/.config/nvim/queries
 ```
 
 Done!
+
+Some of the parsers are installed via pacman and neovim are automatically able
+to find those.

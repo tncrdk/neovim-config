@@ -1,0 +1,26 @@
+Install parsers for the follwing languages:
+- bash
+- c
+- css
+- diff
+- html
+- javascript
+- jsdoc
+- json
+- jsonc
+- lua
+- luadoc
+- luap
+- markdown
+- markdown_inline
+- python
+- r
+- regex
+- rnoweb
+- toml
+- typescript
+- vim
+- vimdoc
+- vue
+- xml
+- yaml
