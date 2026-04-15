@@ -1,6 +1,4 @@
 Install parsers for the follwing languages:
-- bash
-- c
 - css
 - diff
 - html
