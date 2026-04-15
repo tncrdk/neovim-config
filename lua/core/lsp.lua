@@ -54,4 +54,5 @@ vim.diagnostic.config({
 )
 
 -- Enable the Lsp servers to be used
-vim.lsp.enable({ "pyright", "lua_ls", "texlab", "vtsls", "vue_ls", "html", "cssls", "tailwindcss" })
+vim.lsp.enable({ "pyright", "lua_ls", "texlab", "vtsls", "vue_ls", "html", "cssls", "tailwindcss", "clangd",
+    "rust_analyzer", })
