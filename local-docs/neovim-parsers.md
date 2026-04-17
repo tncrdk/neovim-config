@@ -37,3 +37,14 @@ Done!
 
 Some of the parsers are installed via pacman and neovim are automatically able
 to find those.
+
+### NOTE:
+In the case of the python parser I had to manually compile it at the
+correct version (not latest commit), copy the output over to the `parser/`-dir.
+```sh
+tree-sitter generate src/grammar.json
+tree-sitter build -o <filename>
+cp <filename> .../nvim/parser/
+```
+Then I had to manually add vim.treesitter.start() in `ftplugin/python.lua` to
+run this command once opening python files.
