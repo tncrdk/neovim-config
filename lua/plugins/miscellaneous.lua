@@ -12,6 +12,7 @@ return {
     },
     { "brenoprata10/nvim-highlight-colors", config = true, },
     {
+        -- Markdown previewer
         "toppair/peek.nvim",
         event = { "VeryLazy" },
         build = "deno task --quiet build:fast",
