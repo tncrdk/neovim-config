@@ -6,9 +6,9 @@ local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
 local d = ls.dynamic_node
-local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
+local line_begin = require("luasnip.extras.expand_conditions").line_begin
 
 
 table_node = function(args)
@@ -54,6 +54,13 @@ return {
             t("}"),
         }
     ),
+    s({ trig = "tit", dscr = "Expands 'tt' into '\textit{}'" },
+        {
+            t("\\textit{"), -- remember: backslashes need to be escaped
+            i(1),
+            t("}"),
+        }
+    ),
 
     -- there is a much better, human-readable solution: ls.fmt, described shortly.
     s({ trig = "ff", dscr = "Expands 'ff' into '\frac{}{}'" },
@@ -65,36 +72,24 @@ return {
             t("}")
         }
     ),
-
-    -- Greek letter snippets, autotriggered for efficiency
-    s({ trig = ";a", snippetType = "autosnippet" },
+    -- FIGURE
+    s({trig = "fig"},
+      fmta(
+        [[
+        \begin{figure}[htb!]
+          \centering
+          \includegraphics[width=<>\linewidth]{<>}
+          \caption{<>}
+          \label{fig:<>}
+        \end{figure}
+        ]],
         {
-            t("\\alpha"),
+          i(1),
+          i(2),
+          i(3),
+          i(4),
         }
-    ),
-    s({ trig = ";b", snippetType = "autosnippet" },
-        {
-            t("\\beta"),
-        }
-    ),
-    s({ trig = ";g", snippetType = "autosnippet" },
-        {
-            t("\\gamma"),
-        }
-    ),
-    s({ trig = ";m", snippetType = "autosnippet" },
-        {
-            t("\\mu"),
-        }
-    ),
-    s({ trig = ";s", snippetType = "autosnippet" },
-        {
-            t("\\sigma"),
-        }
-    ),
-    s({ trig = ";S", snippetType = "autosnippet" },
-        {
-            t("\\Sigma"),
-        }
+      ),
+      { condition = line_begin }
     ),
 }
